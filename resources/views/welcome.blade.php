@@ -1,4 +1,172 @@
 <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}" >
+
+        <title>Deowangi</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    Deowangi
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{{ __('contact') }}" class="nav__link">Contact Us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{{ route('login') }}" class="nav__link"><i class="ri-user-fill"></i></a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section id="home" class="home">
+                <div>
+                    <img src="assets/img/home-bg.png" alt="" class="home__img">
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="section_padding" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <div class="box-area">	
+                                    <div class="img-area">
+                                    <img src="assets/img/about-pic.png" alt="">
+                                    </div>
+                                    <br>
+                                    <center>
+                                        <p class="content">
+                                            Deowangi adalah sebuah produk deodorant spray wangi yang menggabungkan perlindungan anti-bau
+                                            badan yang efektif dengan aroma yang memikat. Dirancang khusus untuk memberikan kesegaran
+                                            sejati dan kepercayaan diri sepanjang hari. Deowangi menggunakan formula inovatif yang
+                                            melawan bakteri penyebab bau, menjaga anda tetap segar dan
+                                            percaya diri dalam setiap kesempatan.
+                                        </p>
+                                    </center>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== INCGREDIENT ====================-->
+            <section class="container">
+              <img src="assets/img/incgredient.png" alt="">
+            </section>
+
+            <!--==================== PRODUCTS ====================-->
+            <section class="product section container" id="products">
+                <h2 class="section__title-center">
+                    Product Range
+                </h2>
+
+                <div class="product__container grid">
+                    <div class="product__card">
+                        <img src="assets/img/vanila.png" alt="" class="product__img">
+                        <center>
+                            <h3>Soft Vanila</h3>
+                            <a href="#"><button class="product__btn">See Detail</button></a>
+                        </center>
+                    </div>
+                    <div class="product__card">
+                        <img src="assets/img/lemon.png" alt="" class="product__img">
+                        <center>
+                            <h3>Lemon</h3>
+                            <a href="#"><button class="product__btn">See Detail</button></a>
+                        </center>
+                    </div>
+                    <div class="product__card">
+                        <img src="assets/img/greentea.png" alt="" class="product__img">
+                        <center>
+                            <h3>Greentea</h3>
+                            <a href="#"><button class="product__btn">See Detail</button></a>
+                        </center>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <center>
+                    <h1>Dapatkan produk Deowangi Disini</h1>
+                    <br>
+                    <a href="https://shopee.co.id/">
+                        <img src="assets/img/shopee.png" alt="" style="height: 40px; width: 40px; margin-bottom: 4%;">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="assets/img/instagram.png" alt="" style="height: 40px; width: 40px; margin-bottom: 4%; margin-left: 2px; margin-right: 2px;">
+                    </a>
+                    <a href="https://www.whatsapp.com">
+                        <img src="assets/img/wa.png" alt="" style="height: 40px; width: 40px; margin-bottom: 4%;">
+                    </a>
+                </center>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" style="background-color: #84644B;">
+            <center>
+                <h1 style="font-size: medium; color: white;">
+                    © 2023 DEOWANGI ® MEREK DAGANG TERDAFTAR DARI DEOWANGI™ <br> MEREK DEOWANGI TERBATAS SEMUA HAK <br> WARALABA DEOWANGI YANG DIMILIKI DAN DIOPERASIKAN BERDASARKAN LISENSI  
+                </h1>
+            </center>
+            <p class="footer__copy">&#169; Deowangi | Poliwangi</p>
+        </footer>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
+
+
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -137,4 +305,4 @@
             </div>
         </div>
     </body>
-</html>
+</html> --}}
