@@ -54,38 +54,39 @@
 
         <main class="main">
             <!--==================== CONTACT ====================-->
-            <section class="contact section container" id="contact">                
-                <div class="contact__container grid">
+            <section class="product section container" id="contact">                
+                
                     <div class="contact__box">
-                        <h2 class="section__title">
-                           Lebih dekat <br> dengan kami
+                        <h2 class="section__title-center">
+                            Contact us
                         </h2>
                     </div>
 
-                    <form action="" class="contact__form">
-                        <div class="contact__inputs">
-                            <div class="contact__content">
-                                <input type="email" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Email</label>
-                            </div>
-
-                            <div class="contact__content">
-                                <input type="text" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Subject</label>
-                            </div>
-
-                            <div class="contact__content contact__area">
-                                <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
-                                <label for="" class="contact__label">Message</label>
-                            </div>
+                    <form>
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Name">
                         </div>
 
-                        <button class="button button--flex">
-                            Kirim pesan
-                            <i class="ri-arrow-right-up-line button__icon"></i>
-                        </button>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </div>
+
+                        <div class="full-width">
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                        </div>
+
+                        <div class="full-width">
+                            <textarea id="message" placeholder="Message"></textarea>
+                        </div>
+
+                        <div class="full-width">
+                            <button class="contact__btn">
+                                Send
+                            </button>
+                        </div>
                     </form>
-                </div>
+
+                </form>
             </section>
         </main>
 

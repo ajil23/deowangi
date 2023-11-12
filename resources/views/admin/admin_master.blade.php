@@ -70,10 +70,14 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Pilih Tombol "Keluar" Untuk Keluar Dari Halaman Petugas</div>
+                <div class="modal-body">Pilih Tombol "Keluar" Untuk Keluar Dari Halaman Ini</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="{{ route('logout') }}">Keluar</a>
+                    <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                        <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    <span>Keluar</span></a>
                 </div>
             </div>
         </div>
@@ -98,3 +102,4 @@
 </body>
 
 </html>
+

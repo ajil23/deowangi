@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\produkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,13 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('admin.index');
     })->name('admin.index');
+});
+
+Route::prefix('produk')->group(function (){
+    Route::get('/view', [produkController::class, 'index'])->name('produk.view');
+    Route::get('/add', [produkController::class, 'create'])->name('produk.add');
+    Route::get('/edit', [produkController::class, 'edit'])->name('produk.edit');
+    Route::post('/update/{id}', [produkController::class, 'update'])->name('produk.update');
+    Route::get('/delete/{id}', [produkController::class, 'delete'])->name('produk.delete');
+    Route::post('/store', [produkController::class, 'store'])->name('produk.store');
 });
