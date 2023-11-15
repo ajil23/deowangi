@@ -58,8 +58,23 @@
                 <div class="row__detail">
                     <div class="column__detail">
                         <img src="assets/img/greentea.png" alt="" class="detail__img">
-                        <br>
-                        <br>
+                    </div>
+                    @foreach ($data as $item => $row)
+                        <div class="column__detail">
+                            <h3>{{$row->name}}</h3>
+                            <br>
+                            <h4 style="color: black; font-size: medium;">Rp. {{$row->price}}</h4>
+                            <br>
+                            <p>Deskripsi</p>
+                            <hr>
+                            <br>
+                            <p>
+                                {{$row->description}}
+                            </p>
+                        </div>
+                    @endforeach
+                    
+                    <div class="column__detail" style="margin-top: 10%;">
                         <h5 style="margin-left: 4%;">Dapatkan produk Deowangi Disini</h5>
                         <br>
                         <a href=""></a>
@@ -73,40 +88,6 @@
                             <img src="assets/img/wa.png" alt="" style="height: 40px; width: 40px; margin-bottom: 4%;">
                         </a>
                     </div>
-                    <div class="column__detail">
-                        <h3>Deodorant Spray by Deowangi Deodorant tawas spray varian Soft Vanila | 100ml</h3>
-                        <br>
-                        <h4 style="color: black; font-size: medium;">Rp. 12.000</h4>
-                        <br>
-                        <p>Deskripsi</p>
-                        <hr>
-                        <br>
-                        <p>
-                            DEOWANGI DEODORANT | Non Alcohol
-
-                            Pada varian soft vanilla itu sendiri mempunyai aroma
-                            yg sangat manis, segar, dan feminim yg banyak dicintai
-                            oleh pecinta fragrance, perpaduan aroma yang lembut 
-                            dan deodorant spray yg alami ,kombinasi yg sngat pas 
-                            untuk dipakai sehari-hari
-                            .
-                            .
-                            Manfaat:
-                            Bahan alami
-                            Mengontrol kulit
-                            Mengurangi bau badan berlebihan 
-                            Tidak membuat kulit ketiak gelap
-                            Aman untuk ibu hamil dan menyusui
-
-
-                            Cara pemakaian:
-                            Semprotkan 3-4 kali pada ketiak setelah mandi . Gunakan secara teratur untuk hasil yang maksimal. Simpan pada suhu ruang
-                            <a href="github.com">
-                                github nya
-                            </a>
-                        </p>
-                    </div>
-                    <div class="column__detail"></div>
                 </div>
             </section>
         </main>

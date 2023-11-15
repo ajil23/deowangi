@@ -32,6 +32,10 @@
                             <label for="formFile" class="form-label">Gambar</label>
                             <input type="file" class="form-control" id="formFile" name="image" value="{{asset('storage/'.$editProduk->image)}}">
                         </div>                      
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Gambar Tambahan</label>
+                            <input type="file" class="form-control" id="formFile" name="imageDetail[]" multiple>
+                        </div>  
                         <button type="submit" class="btn btn-success">Submit</button>
                         <button onclick="history.back()" type="button" class="btn btn-danger">Batal</button>
                       </form>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -15,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $data['allDataProduk'] = Product::all();
-        return view('backend.produk.view_produk', $data);
+        return view('backend.produk.view_produk', compact('data'));
     }
 
     /**
@@ -46,6 +47,16 @@ class ProductController extends Controller
             $productData->image = $productImage;
         }
         $productData->save();
+
+        foreach ($request->imageDetail as $key => $imageDetail) {
+            $productimg = new ProductImage();
+            if ($productimg->imageDetail = $imageDetail) {
+                $newbaru= $imageDetail->store('imageDetail');
+            }
+            $productimg['imageDetail'] = $newbaru;
+            $productimg->id_products = $productData->id;
+            $productimg->save();
+        }
         return redirect()->route('product.view');
     }
 
@@ -81,6 +92,16 @@ class ProductController extends Controller
             $editProduct->image = $productImage;
         }
         $editProduct->update();
+
+        foreach ($request->imageDetail as $key => $imageDetail) {
+            $productimg = new ProductImage();
+            if ($productimg->imageDetail = $imageDetail) {
+                $newbaru= $imageDetail->store('imageDetail');
+            }
+            $productimg['imageDetail'] = $newbaru;
+            $productimg->id_products = $editProduct->id;
+            $productimg->save();
+        }
         return redirect()->route('product.view');
     }
 
