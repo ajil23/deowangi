@@ -8,7 +8,7 @@
                 <h1 class="h3 mb-2 text-gray-800">Data Produk</h1>
             </div>
             <div class="co text-end mb-2">
-                <a href="{{route('produk.add')}}"><button type="button" class="btn btn-primary">Tambah Produk</button></a>
+                <a href="{{route('product.add')}}"><button type="button" class="btn btn-primary">Tambah Produk</button></a>
             </div>
         </div>
     </div>
@@ -20,23 +20,27 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Kode</th>
-                            <th>Nama Program Studi</th>
-                            <th>Jenjang</th>
+                            <th>Nama</th>
+                            <th>Deskripsi</th>
+                            <th>Harga</th>
+                            <th>Gambar</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($allDataProduk as $item =>$product)
                         <tr>
-                            <td>asd</td>
-                            <td>hwyw</td>
-                            <td>eer</td>
-                            <td>asas</td>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$product->name}}</td>
+                            <td>{{$product->description}}</td>
+                            <td>{{$product->price}}</td>
+                            <td><img src="{{asset('storage/'.$product->image)}}" style="height: 80px; width: 60px;"></td>
                             <td colspan="2">
-                                <a href="{{route('produk.edit')}}" class="btn btn-warning"> Edit </a>
-                                <a href="#" class="btn btn-danger">Hapus</a>
+                                <a href="{{route('product.edit', $product->id)}}" class="btn btn-warning"> Edit </a>
+                                <a href="{{route('product.delete', $product->id)}}" class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table> 
             </div>

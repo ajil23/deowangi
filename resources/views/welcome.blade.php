@@ -104,21 +104,21 @@
                         <img src="assets/img/vanila.png" alt="" class="product__img">
                         <center>
                             <h3>Soft Vanila</h3>
-                            <a href="#"><button class="product__btn">See Detail</button></a>
+                            <a href="{{ __('detail') }}"><button class="product__btn">See Detail</button></a>
                         </center>
                     </div>
                     <div class="product__card">
                         <img src="assets/img/lemon.png" alt="" class="product__img">
                         <center>
                             <h3>Lemon</h3>
-                            <a href="#"><button class="product__btn">See Detail</button></a>
+                            <a href="{{ __('detail') }}"><button class="product__btn">See Detail</button></a>
                         </center>
                     </div>
                     <div class="product__card">
                         <img src="assets/img/greentea.png" alt="" class="product__img">
                         <center>
                             <h3>Greentea</h3>
-                            <a href="#"><button class="product__btn">See Detail</button></a>
+                            <a href="{{ __('detail') }}"><button class="product__btn">See Detail</button></a>
                         </center>
                     </div>
                 </div>

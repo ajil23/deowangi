@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\produkController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +22,10 @@ Route::get('/contact', function (){
     return view('contact');
 });
 
+Route::get('/detail', function (){
+    return view('detail');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -32,11 +36,11 @@ Route::middleware([
     })->name('admin.index');
 });
 
-Route::prefix('produk')->group(function (){
-    Route::get('/view', [produkController::class, 'index'])->name('produk.view');
-    Route::get('/add', [produkController::class, 'create'])->name('produk.add');
-    Route::get('/edit', [produkController::class, 'edit'])->name('produk.edit');
-    Route::post('/update/{id}', [produkController::class, 'update'])->name('produk.update');
-    Route::get('/delete/{id}', [produkController::class, 'delete'])->name('produk.delete');
-    Route::post('/store', [produkController::class, 'store'])->name('produk.store');
+Route::prefix('product')->group(function(){
+    Route::get('/view', [ProductController::class, 'index'])->name('product.view');
+    Route::get('/add', [ProductController::class, 'create'])->name('product.add');
+    Route::post('/store', [ProductController::class, 'store'])->name('product.store');
+    Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+    Route::post('/update/{id}', [ProductController::class, 'update'])->name('product.update');
+    Route::get('/delete/{id}', [ProductController::class, 'destroy'])->name('product.delete');
 });

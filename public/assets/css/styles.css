@@ -420,6 +420,27 @@ img{
   color: white;
 }
 
+.column__detail {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+/* Clear floats after the columns */
+.row__detail:after {
+  content: "";
+  display: table;
+  clear: both;
+  display: grid;
+}
+
+.detail__img{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 270px;
+}
 /*=============== QUESTIONS ===============*/
 .questions{
   background-color: var(--first-color-lighten);

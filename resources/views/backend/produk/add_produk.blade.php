@@ -7,17 +7,35 @@
             <div class="col">
                 <h1 class="h3 mb-2 text-gray-800">Tambah Produk</h1>
             </div>
-            <div class="co text-end mb-2">
-                <button type="button" class="btn btn-success">Submit</button>
-                <button onclick="history.back()" type="button" class="btn btn-danger">Batal</button>
-            </div>
         </div>
     </div>
 
     <div class="card shadow mb-4">
         <div class="card-body">
             <div class="table-responsive">
-                
+                <div class="card-body">
+                    <form method="POST" action="{{route('product.store')}}" enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-3">
+                          <label for="namaProduk" class="form-label">Nama Produk</label>
+                          <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="deskripsi" class="form-label">Deskripsi</label>
+                            <input type="text" class="form-control" id="description" name="description">
+                        </div>
+                        <div class="mb-3">
+                            <label for="harga" class="form-label">Harga</label>
+                            <input type="text" class="form-control" id="price" name="price">
+                        </div>  
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Gambar</label>
+                            <input type="file" class="form-control" id="formFile" name="image" multiple>
+                        </div>                       
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button onclick="history.back()" type="button" class="btn btn-danger">Batal</button>
+                      </form>
+                </div>
             </div>
         </div>
     </div>

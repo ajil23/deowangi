@@ -21,7 +21,7 @@
     
     <!-- Nav Item - Ambulance Collapse Menu -->
     <li class="{{'produk/view' == request()->path() ? 'nav-item active' : 'nav-item'}}">
-        <a class="nav-link" href="{{route('produk.view')}}">
+        <a class="nav-link" href="{{route('product.view')}}">
             <i class="fas fa-solid fa-spa"></i>
             <span>Produk</span></a>
     </li>
