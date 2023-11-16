@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +15,13 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserController::class,'Dashboard']);
 
 Route::get('/contact', function (){
     return view('contact');
 });
 
-Route::get('/detail', function (){
-    return view('detail');
-});
+Route::get('/detail/{id}',[UserController::class,'detail'])->name('detail_user');
 
 Route::middleware([
     'auth:sanctum',

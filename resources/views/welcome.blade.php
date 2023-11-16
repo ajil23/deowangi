@@ -100,14 +100,17 @@
                 </h2>
 
                 <div class="product__container grid">
+                    @foreach ($data as $item)
                     <div class="product__card">
-                        <img src="assets/img/vanila.png" alt="" class="product__img">
+                        <img src="{{asset('storage/'.$item->image)}}" alt="" class="product__img">
                         <center>
-                            <h3>Soft Vanila</h3>
-                            <a href="{{ __('detail') }}"><button class="product__btn">See Detail</button></a>
+                            <h3>{{$item->name}}</h3>
+                            <a href="{{ route('detail_user',$item->id) }}"><button class="product__btn">See Detail</button></a>
                         </center>
                     </div>
-                    <div class="product__card">
+                    @endforeach
+                   
+                    {{-- <div class="product__card">
                         <img src="assets/img/lemon.png" alt="" class="product__img">
                         <center>
                             <h3>Lemon</h3>
@@ -120,7 +123,7 @@
                             <h3>Greentea</h3>
                             <a href="{{ __('detail') }}"><button class="product__btn">See Detail</button></a>
                         </center>
-                    </div>
+                    </div> --}}
                 </div>
             </section>
 

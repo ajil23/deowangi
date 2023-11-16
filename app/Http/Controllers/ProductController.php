@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $data['allDataProduk'] = Product::all();
-        return view('backend.produk.view_produk', compact('data'));
+        return view('backend.produk.view_produk', $data);
     }
 
     /**
@@ -113,5 +113,8 @@ class ProductController extends Controller
         $deleteData = Product::find($id);
         $deleteData->delete();
         return redirect()->route('product.view');
+    }
+    public function detailProduk(string $id) {
+        
     }
 }
