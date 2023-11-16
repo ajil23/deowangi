@@ -62,31 +62,29 @@
                         </h2>
                     </div>
 
-                    <form>
+                    <form action="https://formsubmit.co/peribo1927@eachart.com" method="POST">
                         <div>
-                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="text" name="name" id="name" placeholder="Name" required>
                         </div>
 
                         <div>
-                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </div>
 
                         <div class="full-width">
-                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                            <input type="text" name="subject" id="subject" placeholder="Subject" required>
                         </div>
 
                         <div class="full-width">
-                            <textarea id="message" placeholder="Message"></textarea>
+                            <textarea id="message" name="message" placeholder="Message" required></textarea>
                         </div>
 
                         <div class="full-width">
-                            <button class="contact__btn">
+                            <button class="contact__btn" type="submit">
                                 Send
                             </button>
                         </div>
                     </form>
-
-                </form>
             </section>
         </main>
 
