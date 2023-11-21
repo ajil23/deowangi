@@ -32,39 +32,9 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
-                Deowangi
-            </a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="{{ __('/#home') }}" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="{{ __('/#about') }}" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="{{ __('/#product') }}" class="nav__link">Products</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="{{ __('contact') }}" class="nav__link">Contact Us</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="{{ route('login') }}" class="nav__link"><i class="ri-user-fill"></i></a>
-                    </li>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
-
-            <div class="nav__btns">
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line"></i>
-                </div>
-            </div>
+            <a href="{{ __('/#home') }}" class="nav__logo">
+                <i class="ri-arrow-left-line"></i>
+            </a> 
         </nav>
     </header>
 
