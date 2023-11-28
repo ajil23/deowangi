@@ -56,7 +56,7 @@
             <!--==================== HOME ====================-->
             <section id="home" class="home">
                 <div>
-                    <img src="assets/img/home-bg.png" alt="" class="home__img">
+                    <img src="assets/img/bg-home1.png" alt="" class="home__img">
                 </div>
             </section>
 
@@ -68,7 +68,7 @@
                             <div>
                                 <div class="box-area">	
                                     <div class="img-area">
-                                    <img src="assets/img/about-pic.png" alt="">
+                                    <img src="assets/img/about.png" alt="">
                                     </div>
                                     <br>
                                     <center>
