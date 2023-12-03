@@ -72,6 +72,7 @@
                     <h3>{{ $data->name }}</h3>
                     <br>
                     <h4 style="color: black; font-size: medium;">Rp. {{ $data->price }}</h4>
+                    <p>Stok produk: {{ $data->stock }}</p>
                     <br>
                     <p>Deskripsi</p>
                     <hr>

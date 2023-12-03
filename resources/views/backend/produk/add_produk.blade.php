@@ -26,6 +26,10 @@
                             <textarea class="form-control" id="description" rows="3" name="description"></textarea>
                         </div>
                         <div class="mb-3">
+                            <label for="stock" class="form-label">Stok</label>
+                            <input type="number" class="form-control" id="stock" name="stock">
+                        </div> 
+                        <div class="mb-3">
                             <label for="harga" class="form-label">Harga</label>
                             <input type="text" class="form-control" id="price" name="price">
                         </div>  

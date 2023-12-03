@@ -22,6 +22,7 @@
                             <th>No</th>
                             <th>Nama</th>
                             <th>Deskripsi</th>
+                            <th>Stok</th>
                             <th>Harga</th>
                             <th>Gambar</th>
                             <th>Aksi</th>
@@ -33,6 +34,12 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$product->name}}</td>
                             <td>{{$product->description}}</td>
+                            <td>
+                                {{$product->stock}}
+                                <a href="{{route('stock.edit', $product->id)}}">
+                                    <i class="fas fa-solid fa-wrench"></i>
+                                </a>
+                            </td>
                             <td>{{$product->price}}</td>
                             <td><img src="{{asset('storage/'.$product->image)}}" style="height: 80px; width: 60px;"></td>
                             <td colspan="2">

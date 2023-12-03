@@ -41,6 +41,7 @@ class ProductController extends Controller
         $productData = new Product();
         $productData->name = $request->name;
         $productData->description = $request->description;
+        $productData->stock = $request->stock;
         $productData->price = $request->price;
         if ($request->hasFile('image')) {
             $productImage = $request->file('image')->store('image');
@@ -114,7 +115,16 @@ class ProductController extends Controller
         $deleteData->delete();
         return redirect()->route('product.view');
     }
-    public function detailProduk(string $id) {
-        
+
+    public function stockEdit(string $id) {
+        $editProduk = Product::find($id);
+        return view('backend.produk.edit_stock', compact('editProduk'));  
+    }
+
+    public function stockUpdate(Request $request, string $id) {
+        $editProduct = Product::find($id);
+        $editProduct->stock = $request->stock; 
+        $editProduct->update();
+        return redirect()->route('product.view');
     }
 }

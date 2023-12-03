@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Models\Product;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+
+use function Laravel\Prompts\select;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +34,9 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('admin.index');
+        $totalVarian = Product::count();
+        $totalUsers = User::count();
+        return view('admin.index', compact('totalVarian', 'totalUsers'));
     })->name('admin.index');
 });
 
@@ -38,6 +45,8 @@ Route::prefix('product')->group(function(){
     Route::get('/add', [ProductController::class, 'create'])->name('product.add');
     Route::post('/store', [ProductController::class, 'store'])->name('product.store');
     Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+    Route::get('/stockedit/{id}', [ProductController::class, 'stockEdit'])->name('stock.edit');
+    Route::post('/stokeupdate/{id}', [ProductController::class, 'stockUpdate'])->name('stock.update');
     Route::post('/update/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::get('/delete/{id}', [ProductController::class, 'destroy'])->name('product.delete');
 });
