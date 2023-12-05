@@ -24,6 +24,22 @@
         .hidden {
             display: none;
         }
+
+        .cable-choose {
+            margin-top: 10px
+            margin-bottom: 10px;
+        }
+        
+        .cable-choose button {
+        border: 2px solid #E1E8EE;
+        border-radius: 6px;
+        padding: 5px 10px;
+        font-size: 14px;
+        color: #5E6977;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all .5s;
+        }
     </style>
     <title>Deowangi</title>
 </head>
@@ -69,10 +85,14 @@
                 </div>
 
                 <div class="column__detail">
-                    <h3>{{ $data->name }}</h3>
+                    <h1>{{ $data->name }}</h1>
                     <br>
                     <h4 style="color: black; font-size: medium;">Rp. {{ $data->price }}</h4>
-                    <p>Stok produk: {{ $data->stock }}</p>
+                    <br>
+                     <div class="cable-choose">
+                        <button>60 ml</button>
+                        <button>100 ml</button>
+                      </div>
                     <br>
                     <p>Deskripsi</p>
                     <hr>
@@ -103,16 +123,6 @@
 
         </section>
     </main>
-    <!--==================== FOOTER ====================-->
-    <footer class="footer section" style="background-color: #84644B;">
-        <center>
-            <h1 style="font-size: medium; color: white;">
-                © 2023 DEOWANGI ® MEREK DAGANG TERDAFTAR DARI DEOWANGI™ <br> MEREK DEOWANGI TERBATAS SEMUA HAK <br>
-                WARALABA DEOWANGI YANG DIMILIKI DAN DIOPERASIKAN BERDASARKAN LISENSI
-            </h1>
-        </center>
-        <p class="footer__copy">&#169; Deowangi | Poliwangi</p>
-    </footer>
 
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">

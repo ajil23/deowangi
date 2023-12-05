@@ -68,17 +68,18 @@
                             <div>
                                 <div class="box-area">	
                                     <div class="img-area">
-                                    <img src="assets/img/about.png" alt="">
+                                        <img src="assets/img/about.png" alt="">
                                     </div>
                                     <br>
+                                    <br>
                                     <center>
-                                        <p class="content">
+                                        <h3 class="content">
                                             Deowangi adalah sebuah produk deodorant spray wangi yang menggabungkan perlindungan anti-bau
                                             badan yang efektif dengan aroma yang memikat. Dirancang khusus untuk memberikan kesegaran
                                             sejati dan kepercayaan diri sepanjang hari. Deowangi menggunakan formula inovatif yang
                                             melawan bakteri penyebab bau, menjaga anda tetap segar dan
                                             percaya diri dalam setiap kesempatan.
-                                        </p>
+                                        </h3>
                                     </center>
                                     </div>
                                 </div>
