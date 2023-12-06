@@ -62,7 +62,7 @@
                         </h2>
                     </div>
 
-                    <form action="https://formsubmit.co/peribo1927@eachart.com" method="POST">
+                    <form action="https://formsubmit.co/mitaamelia0202@gmail.com" method="POST">
                         <div>
                             <input type="text" name="name" id="name" placeholder="Name" required>
                         </div>

@@ -105,15 +105,15 @@
                     <h5 style="margin-left: 4%;">Dapatkan produk Deowangi Disini</h5>
                     <br>
                     <a href=""></a>
-                    <a href="https://shopee.co.id/">
+                    <a href="https://shopee.co.id/deowangi.id" target="_blank">
                         <img src="{{ asset('assets/img/shopee.png') }}" alt=""
                             style="height: 40px; width: 40px; margin-bottom: 4%; margin-left: 12%;">
                     </a>
-                    <a href="https://www.instagram.com/">
+                    <a href="https://instagram.com/deowangi.id?igshid=NzZlODBkYWE4Ng==" target="_blank">
                         <img src="{{ asset('assets/img/instagram.png') }}" alt=""
                             style="height: 40px; width: 40px; margin-bottom: 4%; margin-left: 2px; margin-right: 2px;">
                     </a>
-                    <a href="https://www.whatsapp.com">
+                    <a href="http://wa.me/6281917034508" target="_blank">
                         <img src="{{ asset('assets/img/wa.png') }}" alt=""
                             style="height: 40px; width: 40px; margin-bottom: 4%;">
                     </a>
